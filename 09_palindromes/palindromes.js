@@ -9,15 +9,26 @@ const palindromes = function (str) {
         .join('');
 
     // check if palindrome
-    let l = 0, r = str.length - 1;
-    while (l < r){
-        if (str[l] !== str[r]){
-            return false;
-        }
-        l++;
-        r--;
-    }
-    return true;
+
+    //initial solution
+    // let l = 0, r = str.length - 1;
+    // while (l < r){
+    //     if (str[l] !== str[r]){
+    //         return false;
+    //     }
+    //     l++;
+    //     r--;
+    // }
+    // return true;
+
+    //alternatively using methods
+
+    reversed = str
+        .split('')
+        .reverse()
+        .join('');
+    
+    return str === reversed;
 };
 
 // Do not edit below this line
